@@ -1,0 +1,8 @@
+muselina: Oh! Con só ulir isto parece que o mundo brilla un pouquiño máis. Moitas grazas, corazón! #id:36
+[wait time="0.1"]
+queixo: De verdade? Quero dicir… de nada! Alégrome moito de que sexa de utilidade. #id:37
+[wait time="0.1"]
+muselina: Claro que si. Aínda que as cousas parezan difíciles, lembra mirar sempre cara adiante, si? #id:38
+queixo: Si… Si! Moitas grazas señora Muselina. #id:39
+muselina: Adeus, corazón! #id:3a
+[signal arg="finalQueixo"]

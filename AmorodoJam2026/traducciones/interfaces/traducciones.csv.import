@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://4d53ver2e7u"
+
+[deps]
+
+files=["res://AmorodoJam2026/traducciones/interfaces/traducciones.es.translation", "res://AmorodoJam2026/traducciones/interfaces/traducciones.gl.translation", "res://AmorodoJam2026/traducciones/interfaces/traducciones.en.translation"]
+
+source_file="res://AmorodoJam2026/traducciones/interfaces/traducciones.csv"
+dest_files=["res://AmorodoJam2026/traducciones/interfaces/traducciones.es.translation", "res://AmorodoJam2026/traducciones/interfaces/traducciones.gl.translation", "res://AmorodoJam2026/traducciones/interfaces/traducciones.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

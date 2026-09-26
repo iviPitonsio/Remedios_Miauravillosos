@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://dk7oih2kugrr1"]
+
+[ext_resource type="Script" uid="uid://dxkdqs0tl2o1w" path="res://AmorodoJam2026/scripts/main.gd" id="1_fo06w"]
+[ext_resource type="Resource" uid="uid://ryawhu1gjsr3" path="res://AmorodoJam2026/personajes/muselina.dch" id="2_cd2qg"]
+[ext_resource type="Texture2D" uid="uid://b3e377r15idqt" path="res://AmorodoJam2026/assets/2D/fondo/escritorio_frente.png" id="3_2vwui"]
+[ext_resource type="Texture2D" uid="uid://cg7fkykfdsl6k" path="res://AmorodoJam2026/assets/2D/personajes/Muselina.png" id="3_5krgj"]
+[ext_resource type="Script" uid="uid://b7v8t7lf7tar3" path="res://AmorodoJam2026/scripts/personaje.gd" id="4_2vwui"]
+[ext_resource type="Texture2D" uid="uid://bb64c486h82od" path="res://AmorodoJam2026/assets/2D/fondo/fondo.png" id="6_5krgj"]
+[ext_resource type="PackedScene" uid="uid://ju07iossscb2" path="res://AmorodoJam2026/assets/3D/caldero.fbx" id="7_plhih"]
+[ext_resource type="Texture2D" uid="uid://ce6biaxf04y7i" path="res://AmorodoJam2026/assets/2D/iconos/icono_caldero.png" id="12_s6hlg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_plhih"]
+size = Vector3(19.269592, 2.0779114, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2vwui"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dl4dq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_plhih"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cd2qg"]
+
+[node name="Main" type="Node3D" unique_id=1301585116]
+script = ExtResource("1_fo06w")
+personaje = ExtResource("2_cd2qg")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=765669095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4469185, 2.0232365)
+current = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=596008992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+light_energy = 10.0
+omni_range = 12.0
+
+[node name="Fondo" type="Sprite3D" parent="." unique_id=1172445075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7239082, -4.8419046)
+texture = ExtResource("6_5krgj")
+
+[node name="Personaje" type="Sprite3D" parent="." unique_id=585658592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5102987, -4.785931)
+texture = ExtResource("3_5krgj")
+script = ExtResource("4_2vwui")
+
+[node name="Marker3D" type="Marker3D" parent="Personaje" unique_id=348036695]
+editor_description = "El punto desde el que saldrá la burbuja de texto"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.136613, 1.5920281, 0)
+
+[node name="Mesa" type="Sprite3D" parent="." unique_id=1417168316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6752543, -4.639855)
+texture = ExtResource("3_2vwui")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mesa" unique_id=1107125130]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mesa/StaticBody3D" unique_id=1809383349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32510376, -3.8804169, 0)
+shape = SubResource("BoxShape3D_plhih")
+
+[node name="caldero" parent="." unique_id=1278734132 instance=ExtResource("7_plhih")]
+transform = Transform3D(0.399966, 0.0052148956, 0, -0.0052148956, 0.399966, 0, 0, 0, 0.4, -1.648563, 2.3534334, 0)
+visible = false
+
+[node name="Queixo" type="Marker3D" parent="." unique_id=188943135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1095438, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=413680332]
+transform = Transform3D(0.9674138, 0, -0.25320083, 0, 1, 0, 0.25320083, 0, 0.9674138, -1.8393455, 2.1211023, 2.3187642)
+light_energy = 3.0
+spot_range = 10.0
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1125959989]
+transform = Transform3D(0.999915, 0.01303724, 0, -0.01303724, 0.999915, 0, 0, 0, 1, 1.2076036, 2.2929666, -0.12128222)
+disable_mode = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=948919206]
+shape = SubResource("BoxShape3D_2vwui")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=768640]
+transform = Transform3D(0.52, 9.313226e-10, 0, -9.313226e-10, 0.52, 0, 0, 0, 0.52, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_dl4dq")
+mesh = SubResource("BoxMesh_plhih")
+
+[node name="EntregaObjeto" type="Area3D" parent="." unique_id=1321191624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.7687817, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EntregaObjeto" unique_id=613698077]
+transform = Transform3D(2.215386, 0, 0, 0, 1.8067842, 0, 0, 0, 6.022113, 0, 0, -2.5537953)
+shape = SubResource("BoxShape3D_cd2qg")
+
+[node name="BotonMesa" type="TextureButton" parent="." unique_id=769000347]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -238.0
+offset_right = -20.0
+offset_bottom = 226.00003
+grow_horizontal = 0
+scale = Vector2(0.55, 0.55)
+pivot_offset = Vector2(238, 0)
+texture_normal = ExtResource("12_s6hlg")
+
+[node name="PantallaFinal" type="TextureRect" parent="." unique_id=1911859820]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FundidoNegro" type="ColorRect" parent="." unique_id=1473721899]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="input_event" from="Mesa/StaticBody3D" to="." method="_on_static_body_3d_input_event"]
+[connection signal="area_entered" from="EntregaObjeto" to="." method="_on_entrega_objeto_area_entered"]
+[connection signal="pressed" from="BotonMesa" to="." method="_on_boton_mesa_pressed"]

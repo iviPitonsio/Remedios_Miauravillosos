@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://cv6l6c2h3de5j"]
+
+[ext_resource type="Script" uid="uid://coihqqxowvj66" path="res://AmorodoJam2026/scripts/menu_inicio.gd" id="1_s83bu"]
+[ext_resource type="Texture2D" uid="uid://dl87addcn671x" path="res://AmorodoJam2026/assets/2D/pantallas/inicio/Fondo.png" id="2_unp6d"]
+[ext_resource type="Texture2D" uid="uid://bo7gfy4ma2ufl" path="res://AmorodoJam2026/assets/2D/pantallas/inicio/DesignButton.png" id="3_ty2pj"]
+[ext_resource type="Texture2D" uid="uid://q4yttd7xo3ha" path="res://AmorodoJam2026/assets/2D/pantallas/inicio/DesignButtonHover.png" id="4_pc08r"]
+[ext_resource type="FontFile" uid="uid://c3ug6vmre3afc" path="res://AmorodoJam2026/assets/fonts/Monotype Corsiva.ttf" id="5_mutrk"]
+
+[node name="MenuInicio" type="Control" unique_id=1992660660]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s83bu")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1458666419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_unp6d")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=695454799]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -476.09003
+offset_top = -69.09
+offset_right = 91.90967
+offset_bottom = 338.91016
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+theme_override_constants/separation = 4
+
+[node name="BotonInicio" type="TextureButton" parent="VBoxContainer" unique_id=841845978]
+layout_mode = 2
+texture_normal = ExtResource("3_ty2pj")
+texture_hover = ExtResource("4_pc08r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BotonInicio" unique_id=2121158352]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -348.0
+offset_top = -27.833
+offset_right = -232.0
+offset_bottom = 34.167
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Xogar" type="Label" parent="VBoxContainer/BotonInicio/VBoxContainer" unique_id=1699363864]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_mutrk")
+theme_override_font_sizes/font_size = 56
+text = "KEY_JUGAR"
+horizontal_alignment = 1
+
+[node name="Opcións" type="TextureButton" parent="VBoxContainer" unique_id=223635349]
+layout_mode = 2
+texture_normal = ExtResource("3_ty2pj")
+texture_hover = ExtResource("4_pc08r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Opcións" unique_id=1279985]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -373.565
+offset_top = -27.833
+offset_right = -212.565
+offset_bottom = 34.167
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Opciones" type="Label" parent="VBoxContainer/Opcións/VBoxContainer" unique_id=603223043]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_mutrk")
+theme_override_font_sizes/font_size = 56
+text = "KEY_OPCIONES"
+horizontal_alignment = 1
+
+[node name="BotonCreditos" type="TextureButton" parent="VBoxContainer" unique_id=2058052529]
+layout_mode = 2
+texture_normal = ExtResource("3_ty2pj")
+texture_hover = ExtResource("4_pc08r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BotonCreditos" unique_id=359976210]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -373.565
+offset_top = -27.833
+offset_right = -212.565
+offset_bottom = 34.167
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Creditos" type="Label" parent="VBoxContainer/BotonCreditos/VBoxContainer" unique_id=1431505221]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_mutrk")
+theme_override_font_sizes/font_size = 56
+text = "KEY_CREDITOS"
+horizontal_alignment = 1
+
+[node name="BotonSalir" type="TextureButton" parent="VBoxContainer" unique_id=1084633091]
+layout_mode = 2
+texture_normal = ExtResource("3_ty2pj")
+texture_hover = ExtResource("4_pc08r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BotonSalir" unique_id=1747855007]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -356.0
+offset_top = -27.833
+offset_right = -240.0
+offset_bottom = 34.167
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Sair" type="Label" parent="VBoxContainer/BotonSalir/VBoxContainer" unique_id=154708067]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_mutrk")
+theme_override_font_sizes/font_size = 56
+text = "KEY_SALIR"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=91231300]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -662.0
+offset_top = -189.0
+offset_right = -91.0
+offset_bottom = -95.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Titulo" type="Label" parent="VBoxContainer2" unique_id=1754391789]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7921569, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("5_mutrk")
+theme_override_font_sizes/font_size = 65
+text = "Remedios Miauravillosos"
+horizontal_alignment = 2
+
+[connection signal="pressed" from="VBoxContainer/BotonInicio" to="." method="_on_boton_inicio_pressed"]
+[connection signal="pressed" from="VBoxContainer/Opcións" to="." method="_on_opcións_pressed"]
+[connection signal="pressed" from="VBoxContainer/BotonCreditos" to="." method="_on_boton_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/BotonSalir" to="." method="_on_boton_salir_pressed"]

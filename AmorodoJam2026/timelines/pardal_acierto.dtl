@@ -1,0 +1,10 @@
+pardal: Albricias! Nunca vira algo así. Se isto funciona, e un gran paso para todas nos. #id:3b
+[wait time="0.1"]
+queixo: Creo que o fará! #id:3c
+[wait time="0.1"]
+pardal: Pues si tu o crees, eu confío na brillante mente da xuventude. Viva a educación, a ilustración e o cambio. Sabes, tes moito aplomo, sen duda. #id:3d
+[wait time="0.1"]
+queixo: De verdade? #id:3e
+[wait time="0.1"]
+pardal: Que nadie cho faga dudar, nin cambiar o teu camino. A máis ver! #id:3f
+[signal arg="finalQueixo"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cxtnm1d4nldc1"
+
+[deps]
+
+files=["res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo01_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo01_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo01_translation.en.translation"]
+
+source_file="res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo01_translation.csv"
+dest_files=["res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo01_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo01_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo01_translation.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

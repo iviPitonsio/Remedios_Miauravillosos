@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://c5abpswghki42"]
+
+[ext_resource type="Script" uid="uid://c2udgt2uy85ik" path="res://AmorodoJam2026/scripts/creditos.gd" id="1_6afi5"]
+[ext_resource type="Texture2D" uid="uid://dfpjl6ps50j3u" path="res://AmorodoJam2026/assets/2D/fondo/fondoMenus.png" id="1_yc2fo"]
+[ext_resource type="Texture2D" uid="uid://bo7gfy4ma2ufl" path="res://AmorodoJam2026/assets/2D/pantallas/inicio/DesignButton.png" id="2_6afi5"]
+[ext_resource type="Texture2D" uid="uid://q4yttd7xo3ha" path="res://AmorodoJam2026/assets/2D/pantallas/inicio/DesignButtonHover.png" id="3_7ljrx"]
+[ext_resource type="FontFile" uid="uid://c3ug6vmre3afc" path="res://AmorodoJam2026/assets/fonts/Monotype Corsiva.ttf" id="4_7kqb1"]
+
+[node name="Creditos" type="Control" unique_id=1611585041]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_6afi5")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=696991903]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.8998438
+anchor_bottom = 0.9002778
+offset_right = -1111.8
+offset_bottom = -608.2
+grow_vertical = 2
+scale = Vector2(32, 18.009)
+size_flags_horizontal = 8
+size_flags_vertical = 3
+texture = ExtResource("1_yc2fo")
+expand_mode = 1
+
+[node name="VBoxContainerCreditos" type="VBoxContainer" parent="." unique_id=2064634876]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = -135.0
+offset_right = 145.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(104.725, 40.51)
+
+[node name="Soraya" type="Label" parent="VBoxContainerCreditos" unique_id=517621849]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7kqb1")
+theme_override_font_sizes/font_size = 50
+text = "KEY_SORAYA"
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="." unique_id=2091314767]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = 191.195
+offset_right = 396.9995
+offset_bottom = 311.19525
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+theme_override_constants/separation = 4
+
+[node name="BotonSair" type="TextureButton" parent="VBoxContainer3" unique_id=284426585]
+layout_mode = 2
+texture_normal = ExtResource("2_6afi5")
+texture_hover = ExtResource("3_7ljrx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer3/BotonSair" unique_id=1832857599]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -356.0
+offset_top = -27.833
+offset_right = -240.0
+offset_bottom = 34.167
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Atras" type="Label" parent="VBoxContainer3/BotonSair/VBoxContainer" unique_id=924548268]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7kqb1")
+theme_override_font_sizes/font_size = 56
+text = "KEY_ATRAS"
+horizontal_alignment = 1
+
+[node name="Titulo" type="Label" parent="." unique_id=264365838]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.5
+offset_top = 117.275
+offset_right = 78.5
+offset_bottom = 179.27504
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.7921569, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("4_7kqb1")
+theme_override_font_sizes/font_size = 70
+text = "KEY_CREDITOS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainerCreditos2" type="VBoxContainer" parent="." unique_id=906486918]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -60.0
+offset_right = 111.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(104.725, 40.51)
+
+[node name="Rita" type="Label" parent="VBoxContainerCreditos2" unique_id=1462801161]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7kqb1")
+theme_override_font_sizes/font_size = 50
+text = "KEY_RITA"
+horizontal_alignment = 1
+
+[node name="VBoxContainerCreditos3" type="VBoxContainer" parent="." unique_id=561851555]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = 15.0
+offset_right = 145.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(104.725, 40.51)
+
+[node name="Irene" type="Label" parent="VBoxContainerCreditos3" unique_id=588966942]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7kqb1")
+theme_override_font_sizes/font_size = 50
+text = "KEY_IRENE"
+horizontal_alignment = 1
+
+[node name="VBoxContainerCreditos4" type="VBoxContainer" parent="." unique_id=1875808337]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = 90.0
+offset_right = 145.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(104.725, 40.51)
+
+[node name="Ivan" type="Label" parent="VBoxContainerCreditos4" unique_id=160390530]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7kqb1")
+theme_override_font_sizes/font_size = 50
+text = "KEY_IVAN"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer3/BotonSair" to="." method="_on_boton_sair_pressed"]

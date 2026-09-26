@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://dufqs47cx23o6"]
+
+[ext_resource type="Script" uid="uid://b83fw33ci15bu" path="res://AmorodoJam2026/scripts/menu_pausa.gd" id="1_qvb58"]
+[ext_resource type="Texture2D" uid="uid://dfpjl6ps50j3u" path="res://AmorodoJam2026/assets/2D/fondo/fondoMenus.png" id="2_p32hr"]
+[ext_resource type="Texture2D" uid="uid://bo7gfy4ma2ufl" path="res://AmorodoJam2026/assets/2D/pantallas/inicio/DesignButton.png" id="2_wiwsl"]
+[ext_resource type="Texture2D" uid="uid://q4yttd7xo3ha" path="res://AmorodoJam2026/assets/2D/pantallas/inicio/DesignButtonHover.png" id="3_p32hr"]
+[ext_resource type="FontFile" uid="uid://c3ug6vmre3afc" path="res://AmorodoJam2026/assets/fonts/Monotype Corsiva.ttf" id="4_x41q1"]
+
+[node name="MenuPausa" type="CanvasLayer" unique_id=1753668359]
+process_mode = 3
+layer = 100
+script = ExtResource("1_qvb58")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1203617377]
+anchors_preset = -1
+anchor_right = 0.8998438
+anchor_bottom = 0.9002778
+offset_right = -1111.8
+offset_bottom = -608.2
+grow_vertical = 2
+scale = Vector2(32, 18.009)
+size_flags_horizontal = 8
+size_flags_vertical = 3
+texture = ExtResource("2_p32hr")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1555169187]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -67.625
+offset_right = 397.0
+offset_bottom = 150.37543
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+theme_override_constants/separation = 4
+
+[node name="BotonContinuar" type="TextureButton" parent="VBoxContainer" unique_id=1600347245]
+layout_mode = 2
+texture_normal = ExtResource("2_wiwsl")
+texture_hover = ExtResource("3_p32hr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BotonContinuar" unique_id=1868595959]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.44
+offset_top = -31.0
+offset_right = 94.56006
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Continuar" type="Label" parent="VBoxContainer/BotonContinuar/VBoxContainer" unique_id=1644198802]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_x41q1")
+theme_override_font_sizes/font_size = 56
+text = "Continuar"
+horizontal_alignment = 1
+
+[node name="BotonSair" type="TextureButton" parent="VBoxContainer" unique_id=460906322]
+layout_mode = 2
+texture_normal = ExtResource("2_wiwsl")
+texture_hover = ExtResource("3_p32hr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BotonSair" unique_id=1539282666]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -356.0
+offset_top = -27.833
+offset_right = -240.0
+offset_bottom = 34.167
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Sair" type="Label" parent="VBoxContainer/BotonSair/VBoxContainer" unique_id=1823316000]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_x41q1")
+theme_override_font_sizes/font_size = 56
+text = "Sair"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/BotonContinuar" to="." method="_on_boton_continuar_pressed"]
+[connection signal="pressed" from="VBoxContainer/BotonSair" to="." method="_on_boton_sair_pressed"]

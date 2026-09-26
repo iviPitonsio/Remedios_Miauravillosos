@@ -1,0 +1,4 @@
+pardal: Que barbaridad…Non sei se esto será exactamente o que nos saque desde sufrimento, joven. Vendo as tuas aptitudes, creo que poderias habelo feito mellor. Pero non queda otra que probalo. Vaia con Deus! #id:40
+[wait time="0.1"]
+queixo: Vaia... #id:41
+[signal arg="finalQueixo"]

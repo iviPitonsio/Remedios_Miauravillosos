@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cj6ijti67i50t"
+
+[deps]
+
+files=["res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_sosego_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_sosego_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_sosego_translation.en.translation"]
+
+source_file="res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_sosego_translation.csv"
+dest_files=["res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_sosego_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_sosego_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_sosego_translation.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

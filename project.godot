@@ -1,0 +1,171 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="AmorodoJam2026"
+config/name_localized={
+"gl": ""
+}
+run/main_scene="uid://cv6l6c2h3de5j"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Dialogic="*uid://ds2q0uclmolvu"
+ListaRecetas="*uid://w1d61ksbqqkj"
+MenuPausa="*uid://dufqs47cx23o6"
+Music="*uid://clclqvu56h4qw"
+
+[dialogic]
+
+directories/dch_directory={
+"avóa": "res://AmorodoJam2026/personajes/avóa.dch",
+"muselina": "res://AmorodoJam2026/personajes/muselina.dch",
+"pardal": "res://AmorodoJam2026/personajes/pardal.dch",
+"pita": "res://AmorodoJam2026/personajes/pita.dch",
+"queixo": "res://AmorodoJam2026/personajes/queixo.dch"
+}
+directories/dtl_directory={
+"carta": "res://AmorodoJam2026/timelines/carta.dtl",
+"final_bueno": "res://AmorodoJam2026/timelines/final_bueno.dtl",
+"final_malo": "res://AmorodoJam2026/timelines/final_malo.dtl",
+"muselina_acierto": "res://AmorodoJam2026/timelines/muselina_acierto.dtl",
+"muselina_fallo": "res://AmorodoJam2026/timelines/muselina_fallo.dtl",
+"muselina_llegada": "res://AmorodoJam2026/timelines/muselina_llegada.dtl",
+"muselina_sosego": "res://AmorodoJam2026/timelines/muselina_sosego.dtl",
+"pardal_acierto": "res://AmorodoJam2026/timelines/pardal_acierto.dtl",
+"pardal_fallo": "res://AmorodoJam2026/timelines/pardal_fallo.dtl",
+"pardal_llegada": "res://AmorodoJam2026/timelines/pardal_llegada.dtl",
+"pardal_ultra": "res://AmorodoJam2026/timelines/pardal_ultra.dtl",
+"pita_acierto": "res://AmorodoJam2026/timelines/pita_acierto.dtl",
+"pita_fallo": "res://AmorodoJam2026/timelines/pita_fallo.dtl",
+"pita_llegada": "res://AmorodoJam2026/timelines/pita_llegada.dtl",
+"pita_rompetestas": "res://AmorodoJam2026/timelines/pita_rompetestas.dtl",
+"queixo01": "res://AmorodoJam2026/timelines/queixo01.dtl",
+"queixo02": "res://AmorodoJam2026/timelines/queixo02.dtl",
+"queixo03": "res://AmorodoJam2026/timelines/queixo03.dtl",
+"queixo04": "res://AmorodoJam2026/timelines/queixo04.dtl",
+"tutorial": "res://AmorodoJam2026/timelines/tutorial.dtl"
+}
+layout/style_directory={
+"": "res://AmorodoJam2026/styles/texts.tres",
+"text_final": "res://AmorodoJam2026/styles/text_final.tres",
+"texts": "res://AmorodoJam2026/styles/texts.tres"
+}
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+layout/style_list=["res://AmorodoJam2026/styles/texts.tres", "res://AmorodoJam2026/styles/text_final.tres"]
+layout/default_style="res://AmorodoJam2026/styles/texts.tres"
+variables={}
+glossary/default_case_sensitive=true
+translation/enabled=true
+translation/original_locale=""
+translation/file_mode=1
+translation/translation_folder="res://AmorodoJam2026/traducciones/dialogos"
+translation/save_mode=0
+translation/add_separator=false
+translation/id_counter=112
+translation/locales=[]
+translation/intern/save_mode=0
+translation/intern/file_mode=1
+translation/intern/translation_folder="res://AmorodoJam2026/traducciones/dialogos"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/subwindows/embed_subwindows=false
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ai_assistant_hub/plugin.cfg", "res://addons/dialogic/plugin.cfg")
+
+[input]
+
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+pausa={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translation_remaps={
+"res://AmorodoJam2026/assets/2D/pantallas/libro/gl/libro_receta1.png": PackedStringArray("res://AmorodoJam2026/assets/2D/pantallas/libro/es/polvoshuyelejos.png:es_ES", "res://AmorodoJam2026/assets/2D/pantallas/libro/en/runawaypowder.png:en"),
+"res://AmorodoJam2026/assets/2D/pantallas/libro/gl/libro_receta2.png": PackedStringArray("res://AmorodoJam2026/assets/2D/pantallas/libro/en/quietudejuice.png:en", "res://AmorodoJam2026/assets/2D/pantallas/libro/es/zumososiego.png:es_ES"),
+"res://AmorodoJam2026/assets/2D/pantallas/libro/gl/libro_receta3.png": PackedStringArray("res://AmorodoJam2026/assets/2D/pantallas/libro/es/pildorasrompecraneos.png:es_ES", "res://AmorodoJam2026/assets/2D/pantallas/libro/en/skullbreakingpills.png:en"),
+"res://AmorodoJam2026/assets/2D/pantallas/libro/gl/libro_receta4.png": PackedStringArray("res://AmorodoJam2026/assets/2D/pantallas/libro/en/ultrafurlotion.png:en", "res://AmorodoJam2026/assets/2D/pantallas/libro/es/locionultrabellus.png:es_ES"),
+"res://AmorodoJam2026/assets/2D/pantallas/libro/gl/libro_receta5.png": PackedStringArray("res://AmorodoJam2026/assets/2D/pantallas/libro/es/cremanopuedomas.png:es_ES", "res://AmorodoJam2026/assets/2D/pantallas/libro/en/creamicannot.png:en"),
+"res://AmorodoJam2026/assets/2D/pantallas/libro/gl/libro_receta6.png": PackedStringArray("res://AmorodoJam2026/assets/2D/pantallas/libro/en/growalotpills.png:en", "res://AmorodoJam2026/assets/2D/pantallas/libro/es/pildorascrecemucho.png:es_ES")
+}
+locale/translations=PackedStringArray("res://AmorodoJam2026/traducciones/interfaces/traducciones.en.translation", "res://AmorodoJam2026/traducciones/interfaces/traducciones.es.translation", "res://AmorodoJam2026/traducciones/interfaces/traducciones.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_carta_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_character_translations.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_final_bueno_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_final_malo_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_acierto_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_fallo_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_llegada_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_sosego_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pardal_acierto_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pardal_fallo_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pardal_llegada_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pardal_ultra_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pita_acierto_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pita_fallo_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pita_llegada_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pita_rompetestas_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo01_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo01_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo01_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo02_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo03_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_tutorial_translation.gl.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_llegada_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_llegada_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_final_bueno_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_final_bueno_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_final_malo_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_final_malo_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_fallo_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_fallo_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo02_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo02_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo03_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_queixo03_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_carta_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_carta_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_sosego_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_muselina_sosego_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pardal_acierto_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pardal_acierto_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pardal_fallo_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pardal_fallo_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pardal_llegada_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pardal_llegada_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pita_acierto_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pita_acierto_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pita_fallo_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pita_fallo_translation.es.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pita_llegada_translation.en.translation", "res://AmorodoJam2026/traducciones/dialogos/dialogic_pita_llegada_translation.es.translation")
+locale/fallback="gl"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[plugins]
+
+ai_assistant_hub/options/debug_mode=0
+ai_assistant_hub/llm_api="gemini_api"
+ai_assistant_hub/preferences/thinking_target=0
+ai_assistant_hub/preferences/skip_greeting=false
+ai_assistant_hub/preferences/always_scroll_to_bottom=false
+ai_assistant_hub/preferences/audio_hints=true
+ai_assistant_hub/options/debug_http_content=false
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

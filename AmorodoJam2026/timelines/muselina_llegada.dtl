@@ -1,0 +1,17 @@
+muselina: Ola? Podo pasar? #id:2c
+[wait time="0.1"]
+queixo: Ai! Ola, ola! Si, pasa por favor! #id:2d
+[wait time="0.1"]
+muselina: Graciñas. Oh! Ti non es a dama habitual. Creo que non te vin por aquí antes. #id:2e
+[wait time="0.1"]
+queixo: Non, señora. Creo que refírestes á miña avoa, pero agora son eu o encargade da tenda. Chámome Queixo. #id:2f
+[wait time="0.1"]
+muselina: Ah pois encantada Queixo! Eu son Muselina, a túa avoa facía uns remedios fantásticos, así que adoito vir bastante por aquí. Estou segura de que ti poderás axudarme tamén. #id:30
+[wait time="0.1"]
+queixo: Si… eeeh… Si! Claro… iso espero. Cal é o problema? #id:31
+[wait time="0.1"]
+muselina: Ai corazón, pois o de sempre… Sombras que agóchanse para atacar cando menos cho esperas, noites en vela nas que o soño fuxe lonxe de min, mañás longas e lentas… #id:32
+muselina: Ai! Crees que tes algo para min? #id:33
+[wait time="0.1"]
+queixo: Si, si, dame tan só un segundo… #id:34
+queixo: (A ver… espero que o libro da avoa poida axudarme. Vou collelo e miro na mesa de traballo que podo facer.) #id:35
