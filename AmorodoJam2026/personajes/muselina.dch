@@ -19,7 +19,7 @@
 &"portraits": {
 "Muselina": {
 "export_overrides": {
-"image": "\"res://AmorodoJam2026/assets/2D/personajes/Muselina.png\""
+"image": "\"res://AmorodoJam2026/assets/2D/personajes/muselina/Muselina.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

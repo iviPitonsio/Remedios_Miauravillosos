@@ -19,7 +19,7 @@
 &"portraits": {
 "Pardal": {
 "export_overrides": {
-"image": "\"res://AmorodoJam2026/assets/2D/personajes/Pardal.png\""
+"image": "\"res://AmorodoJam2026/assets/2D/personajes/pardal/Pardal.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

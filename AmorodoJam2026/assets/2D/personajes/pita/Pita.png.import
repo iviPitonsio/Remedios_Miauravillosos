@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daf6x3jcd2rqe"
-path="res://.godot/imported/Pardal.png-aad5688efd57d2a4b222ba627df72b53.ctex"
+uid="uid://bfuihekr6uv32"
+path="res://.godot/imported/Pita.png-0cc33a97143cb07d23a1e967f921fc93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AmorodoJam2026/assets/2D/personajes/Pardal.png"
-dest_files=["res://.godot/imported/Pardal.png-aad5688efd57d2a4b222ba627df72b53.ctex"]
+source_file="res://AmorodoJam2026/assets/2D/personajes/pita/Pita.png"
+dest_files=["res://.godot/imported/Pita.png-0cc33a97143cb07d23a1e967f921fc93.ctex"]
 
 [params]
 

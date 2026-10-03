@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfuihekr6uv32"
-path="res://.godot/imported/Pita.png-bc0f127e49b0d6bc94bcab7e0f6e45a8.ctex"
+uid="uid://dcn244kwrsje"
+path="res://.godot/imported/Muselina_Enfadada.png-acb9c3239c38bd0960bf90fed17d2b5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AmorodoJam2026/assets/2D/personajes/Pita.png"
-dest_files=["res://.godot/imported/Pita.png-bc0f127e49b0d6bc94bcab7e0f6e45a8.ctex"]
+source_file="res://AmorodoJam2026/assets/2D/personajes/muselina/Muselina_Enfadada.png"
+dest_files=["res://.godot/imported/Muselina_Enfadada.png-acb9c3239c38bd0960bf90fed17d2b5c.ctex"]
 
 [params]
 

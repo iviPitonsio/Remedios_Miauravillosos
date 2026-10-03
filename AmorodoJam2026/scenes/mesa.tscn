@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3bq80uu2mxtl" path="res://AmorodoJam2026/scripts/mesa.gd" id="1_g7d2v"]
 [ext_resource type="Script" uid="uid://bkv31at5n1xih" path="res://AmorodoJam2026/scripts/caldero.gd" id="2_kln0t"]
+[ext_resource type="Texture2D" uid="uid://dfwen3bm1jlb4" path="res://AmorodoJam2026/assets/3D/texturas/txt_mesa.png" id="2_uydu6"]
 [ext_resource type="Script" uid="uid://daxo58j0cwpf7" path="res://AmorodoJam2026/scripts/ingredientes.gd" id="3_cobq2"]
 [ext_resource type="Texture2D" uid="uid://cvbjdmn0po8x2" path="res://AmorodoJam2026/assets/3D/texturas/Caldero_lp_AlbedoTransparency.png" id="3_oui63"]
 [ext_resource type="Texture2D" uid="uid://baahc3acxu7j2" path="res://AmorodoJam2026/assets/3D/texturas/Caldero_lp_Normal.png" id="4_f6io8"]
@@ -18,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://rpw8va731kv7" path="res://AmorodoJam2026/assets/2D/botones/flecha_vuelta.png" id="16_273d8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j67ge"]
-albedo_color = Color(0.6851845, 0.20734388, 0, 1)
+albedo_texture = ExtResource("2_uydu6")
 
 [sub_resource type="BoxMesh" id="BoxMesh_g7d2v"]
 
@@ -229,7 +230,7 @@ shadow_mesh = SubResource("ArrayMesh_83min")
 script = ExtResource("1_g7d2v")
 
 [node name="Mesa" type="MeshInstance3D" parent="." unique_id=1652779723]
-transform = Transform3D(22.964851, 0, 0, 0, 2, 0, 0, 0, 16.682446, 0, 1, 0)
+transform = Transform3D(18.25841, 0, 0, 0, 2, 0, 0, 0, 11.832996, 0.047225, 1, 0.6662681)
 material_override = SubResource("StandardMaterial3D_j67ge")
 mesh = SubResource("BoxMesh_g7d2v")
 
@@ -240,12 +241,13 @@ physics_material_override = SubResource("PhysicsMaterial_4gsak")
 shape = SubResource("BoxShape3D_cobq2")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1660184208]
-transform = Transform3D(1, 0, 0, 0, 0.5560781, 0.83113015, 0, -0.83113015, 0.5560781, 0, 4.6767163, 3.0228074)
+transform = Transform3D(1.1644928, 0, 0, 0, 0.6475489, 0.9678451, 0, -0.9678451, 0.6475489, 0, 4.6767163, 3.0228074)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=744406131]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.583176, 0)
-light_energy = 5.0
-omni_range = 50.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9267473, 0)
+light_energy = 2.0
+shadow_enabled = true
+omni_range = 15.0
 
 [node name="Area3D" type="Area3D" parent="." unique_id=102458135]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.919184, 2, 1.2471738)
@@ -342,6 +344,7 @@ mesh = SubResource("ArrayMesh_h3mhi")
 [node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=453346980]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 13.97476, 0)
 light_energy = 16.0
+distance_fade_enabled = true
 spot_range = 20.0
 
 [node name="PotEffect" type="AudioStreamPlayer3D" parent="." unique_id=2029008900]

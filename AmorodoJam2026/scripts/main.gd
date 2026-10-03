@@ -54,7 +54,9 @@ const CLIENTES_COLA = [
 		"timeline_acierto": "muselina_sosego",
 		"timeline_fallo": "muselina_fallo",
 		"timeline_intermedia": "queixo02",
-		"sprite": preload("res://AmorodoJam2026/assets/2D/personajes/Muselina.png")
+		"spriteBase": preload("res://AmorodoJam2026/assets/2D/personajes/muselina/Muselina.png"),
+		"spriteAlegre": preload("res://AmorodoJam2026/assets/2D/personajes/muselina/Muselina_Alegre.png"),
+		"spriteEnfadada": preload("res://AmorodoJam2026/assets/2D/personajes/muselina/Muselina_Enfadada.png")
 	},
 	{
 		"personaje_dialogic": preload("res://AmorodoJam2026/personajes/pita.dch"),
@@ -63,7 +65,9 @@ const CLIENTES_COLA = [
 		"timeline_acierto": "pita_acierto",
 		"timeline_fallo": "pita_fallo",
 		"timeline_intermedia": "queixo03",
-		"sprite": preload("res://AmorodoJam2026/assets/2D/personajes/Pita.png")
+		"spriteBase": preload("res://AmorodoJam2026/assets/2D/personajes/pita/Pita.png"),
+		"spriteAlegre": preload("res://AmorodoJam2026/assets/2D/personajes/pita/Pita_Contenta.png"),
+		"spriteEnfadada": preload("res://AmorodoJam2026/assets/2D/personajes/pita/Pita_Enfadada.png")
 	},
 	{
 		"personaje_dialogic": preload("res://AmorodoJam2026/personajes/pardal.dch"),
@@ -72,7 +76,9 @@ const CLIENTES_COLA = [
 		"timeline_acierto": "pardal_acierto",
 		"timeline_fallo": "pardal_fallo",
 		"timeline_intermedia": "queixo04",
-		"sprite": preload("res://AmorodoJam2026/assets/2D/personajes/Pardal.png")
+		"spriteBase": preload("res://AmorodoJam2026/assets/2D/personajes/pardal/Pardal.png"),
+		"spriteAlegre": preload("res://AmorodoJam2026/assets/2D/personajes/pardal/Emilia_Contenta.png"),
+		"spriteEnfadada": preload("res://AmorodoJam2026/assets/2D/personajes/pardal/Emilia_Enfadada.png")
 	}
 ]
 
@@ -97,7 +103,7 @@ func _ready():
 		if ListaRecetas.clienteActual < CLIENTES_COLA.size():
 			var datosCliente = CLIENTES_COLA[ListaRecetas.clienteActual]
 			
-			$Personaje.texture = datosCliente["sprite"]
+			$Personaje.texture = datosCliente["spriteBase"]
 			
 			# Solo iniciamos el diálogo si no se había iniciado ya esta ronda
 			if not ListaRecetas.dialogoInicial:
@@ -216,8 +222,10 @@ func _on_entrega_objeto_area_entered(area):
 	if recetaJugador == datosCliente["pocion_pedida"]:
 		timeline = datosCliente["timeline_acierto"]
 		ListaRecetas.aciertos += 1
+		$Personaje.texture = datosCliente["spriteAlegre"]
 	else:
 		timeline = datosCliente["timeline_fallo"] 
+		$Personaje.texture = datosCliente["spriteEnfadada"]
 
 	# Iniciamos la conversación correspondiente
 	var dialogoEntrega = Dialogic.start(timeline)
@@ -310,7 +318,7 @@ func _aplicar_material(nodo: Node, material: Material):
 
 func nuevo_cliente(datos: Dictionary):
 	$Personaje.fade_in(1.5)
-	$Personaje.texture = datos["sprite"]
+	$Personaje.texture = datos["spriteBase"]
 	var dialogo = Dialogic.start(datos["timeline_llegada"])
 	dialogo.register_character(datos["personaje_dialogic"], $Personaje/Marker3D)
 	dialogo.register_character(QUEIXO, puntoQueixo)
