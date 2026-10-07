@@ -32,10 +32,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -476.09003
-offset_top = -69.09
-offset_right = 91.90967
-offset_bottom = 338.91016
+offset_left = -500.0
+offset_top = 15.0
+offset_right = 67.999756
+offset_bottom = 423.00037
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.6, 0.6)
@@ -144,28 +144,6 @@ theme_override_fonts/font = ExtResource("5_mutrk")
 theme_override_font_sizes/font_size = 56
 text = "KEY_SALIR"
 horizontal_alignment = 1
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=91231300]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -662.0
-offset_top = -189.0
-offset_right = -91.0
-offset_bottom = -95.0
-grow_horizontal = 0
-grow_vertical = 2
-
-[node name="Titulo" type="Label" parent="VBoxContainer2" unique_id=1754391789]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.7921569, 0.3764706, 1)
-theme_override_fonts/font = ExtResource("5_mutrk")
-theme_override_font_sizes/font_size = 65
-text = "Remedios Miauravillosos"
-horizontal_alignment = 2
 
 [connection signal="pressed" from="VBoxContainer/BotonInicio" to="." method="_on_boton_inicio_pressed"]
 [connection signal="pressed" from="VBoxContainer/Opcións" to="." method="_on_opcións_pressed"]

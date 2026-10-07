@@ -290,12 +290,8 @@ func actualizarPocion():
 			var mat = StandardMaterial3D.new()
 			mat.albedo_texture = TEXTURAS_POCIONES[resultado]
 			
-			# Activamos la transparencia
-			mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-			
 			# Asignamos el material buscando la malla real dentro del modelo
 			_aplicar_material(modeloFinal, mat)
-			
 			
 		# Reseteamos su posición local para que esté en el centro del Area3D
 		modeloFinal.position = Vector3.ZERO
