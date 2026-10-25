@@ -30,4 +30,4 @@ layer_info = {
 "10": SubResource("Resource_mcuye"),
 "11": SubResource("Resource_w3gbw")
 }
-metadata/_latest_layer = "10"
+metadata/_latest_layer = "11"

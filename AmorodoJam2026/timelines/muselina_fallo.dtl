@@ -1,4 +1,4 @@
-muselina: Eeeh, graciñas corazón, seguro que algo consigo con isto. Ten un bo día. #id:2a
+muselina: Eeeh, graciñas corazón, seguro que algo consigo con isto. Ten un bo día. #id:30
 [wait time="0.1"]
-queixo: Quizáis debería fixarme un pouco máis para a próxima… #id:2b
+queixo: Quizáis debería fixarme un pouco máis para a próxima… #id:31
 [signal arg="finalQueixo"]

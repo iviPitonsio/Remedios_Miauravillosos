@@ -1,18 +1,24 @@
-pita: Bos días! Como vos atopades? Como vai a tenda? #id:52
+pita: Bos días! Como vos atopades? Como vai a tenda? #id:62
 [wait time="0.1"]
-queixo: B-bos días…pois por agora penso que ben. E vos? #id:53
+queixo: B-bos días…pois por agora penso que ben. E vos? #id:63
 [wait time="0.1"]
-pita: A min lévame o demo! Férveme o sangue enteiro! #id:54
+pita: A min lévame o demo! Férveme o sangue enteiro! #id:64
 [wait time="0.1"]
-queixo: Vaia! E logo?! Que acontece? #id:55
-pita: Que VAI acontecer! Non deixo de pensar neses alma de can, malpoucados! Que nolo queren arrebatar todo! #id:56
+queixo: Vaia! E logo?! Que acontece? #id:65
 [wait time="0.1"]
-queixo: P-perdoe, pero quenes…? #id:57
+pita: Que VAI acontecer! Non deixo de pensar neses alma de can, malpoucados! Que nolo queren arrebatar todo! #id:66
 [wait time="0.1"]
-pita: Quen ha ser?! Os cocháns dos luteranos que veñen do norte. Mal demo os leve. Non teñen co seu, han de vir aquí a polo noso. Pero ti non te preocupes, que han de chorar á Frouseira. #id:58
+queixo: P-perdoe, pero quenes…? #id:67
 [wait time="0.1"]
-queixo: A-ah, sí? #id:59
+pita: Quen ha ser?! Os cocháns dos luteranos que veñen do norte. Mal demo os leve. #id:68
+pita: Non teñen co seu, han de vir aquí a polo noso. Pero ti non te preocupes, que han de chorar á Frouseira. #id:69
 [wait time="0.1"]
-pita: Arrenego do demo que sí! E ti hasme axudar! Eu, coas miñas propias mans dareilles conta a esos cocháns, por San Telmo vivo! Mais…preciso un suplemento que me outorgue farta forza para mallar neles e darlles nos narices. Son moitos e moi almas de can! Entendes? #id:5a
+queixo: A-ah, sí? #id:6a
 [wait time="0.1"]
-queixo: Entendo?...Penso que sí. Vou ver o que podo facer. #id:5b
+pita: Arrenego do demo que sí! E ti hasme axudar! #id:6b
+pita: Eu, coas miñas propias mans dareilles conta a esos cocháns, por San Telmo vivo! #id:6c
+pita: Mais…preciso un suplemento que me outorgue farta forza para mallar neles e darlles nos narices. #id:6d
+pita: Son moitos e moi almas de can! #id:6e
+pita: Entendes? #id:6f
+[wait time="0.1"]
+queixo: Entendo?...Penso que sí. Vou ver o que podo facer. #id:70

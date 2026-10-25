@@ -1,6 +1,8 @@
-pita: Válgame Deus! Isto vaime dar máis forza que o vento das castañas! Deus llo pague…porque a min non me quedan reais. #id:4e
+pita: Válgame Deus! Isto vaime dar máis forza que o vento das castañas! #id:5b
+pita: Deus llo pague…porque a min non me quedan reais. #id:5c
 [wait time="0.1"]
-queixo: Pero…! #id:4f
+queixo: Pero…! #id:5d
 [wait time="0.1"]
-pita: Ah, e rapaz…mostra mais a tua fortaleza, ou hante pasar por riba como a marea. Espero que cando chegue o día, se tes honra, me sigas. Con Deus! #id:50
+pita: Ah, e rapaz…mostra mais a tua fortaleza, ou hante pasar por riba como a marea. #id:5e
+pita: Espero que cando chegue o día, se tes honra, me sigas. Con Deus! #id:5f
 [signal arg="finalQueixo"]
