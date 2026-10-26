@@ -59,6 +59,10 @@ func add_bubble() -> void:
 
 
 func _on_dialogic_text_event(info:Dictionary):
+	if bubbles.is_empty():
+		add_bubble()
+	if bubbles.is_empty():
+		return
 	var bubble_to_use: Node
 	for bubble in bubbles:
 		if bubble.current_character == info.character:

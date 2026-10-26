@@ -396,6 +396,11 @@ func _on_dialogic_signal(argumento: String):
 
 			var finalBueno = Dialogic.start("carta")
 			finalBueno.register_character(QUEIXO, puntoQueixo)
+			
+			var layout = Dialogic.Styles.get_layout_node()
+			
+			if layout:
+				layout.register_character(QUEIXO, puntoQueixo)
 
 		"finalBueno":
 			$PantallaFinal.visible = true
