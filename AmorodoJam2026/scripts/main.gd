@@ -14,6 +14,8 @@ var objetoAgarrado: Area3D = null
 var distanciaCamara: float = 0.0
 var profundidadFija: float = 0.0
 
+var tween_parpadeo: Tween
+var enTransicion: bool = false
 
 @onready var botonMesa = $BotonMesa
 
@@ -114,12 +116,13 @@ func _ready():
 			$Personaje.visible = false
 			get_tree().change_scene_to_file("res://AmorodoJam2026/scenes/main.tscn")
 
-
 	# Cambiamos el aspecto del objeto antes de que el jugador lo vea
 	actualizarPocion()
 
 	Dialogic.signal_event.connect(_on_dialogic_signal)
-
+	
+	if ListaRecetas.clienteActual == 0:
+		iniciar_parpadeo() # Iniciamos el parpadeo del caldero solo en el primer cliente
 
 ### ENTREGAR OBJETO
 
@@ -183,26 +186,16 @@ func soltar_objeto():
 
 func _process(_delta): 
 	
-	if Dialogic.current_timeline != null:
-		botonMesa.visible = false
-	else:
-		botonMesa.visible = true
-		
-	if get_tree().paused:
+	botonMesa.visible = Dialogic.current_timeline == null and not enTransicion
+
+	if get_tree().paused or not objetoAgarrado:
 		return
-		
 
-	if objetoAgarrado:
-		var raton = get_viewport().get_mouse_position()
-		var camara = get_viewport().get_camera_3d()
-
-		#Guardamos en una variable las coordenadas del objeto en todo momento mientras lo movemos
-		var mover = camara.project_position(raton, distanciaCamara)
-		
-		mover.z = profundidadFija
-		
-		# Asignamos la posición
-		objetoAgarrado.global_position = mover
+	var raton = get_viewport().get_mouse_position()
+	var camara = get_viewport().get_camera_3d()
+	var mover = camara.project_position(raton, distanciaCamara)
+	mover.z = profundidadFija
+	objetoAgarrado.global_position = mover
 
 
 func _on_entrega_objeto_area_entered(area):
@@ -299,7 +292,24 @@ func actualizarPocion():
 		
 		# Controlamos el tamaño del objeto
 		modeloFinal.scale = Vector3(0.3, 0.3, 0.3)
+		
 
+
+### PARPADEO DEL CALDERO
+func iniciar_parpadeo(velocidad: float = 0.6):
+	detener_parpadeo()
+	tween_parpadeo = botonMesa.create_tween().set_loops()
+	tween_parpadeo.set_trans(Tween.TRANS_SINE)
+	tween_parpadeo.tween_property(botonMesa, "modulate:a", 0.3, velocidad)
+	tween_parpadeo.tween_property(botonMesa, "modulate:a", 1.0, velocidad)
+
+func detener_parpadeo():
+	if tween_parpadeo:
+		tween_parpadeo.kill()
+		tween_parpadeo = null
+	botonMesa.modulate.a = 1.0
+	
+	
 ### MATERIALES
 
 func _aplicar_material(nodo: Node, material: Material):
@@ -325,7 +335,7 @@ func nuevo_cliente(datos: Dictionary):
 func _on_dialogic_signal(argumento: String):
 	match argumento:
 		"finalQueixo":
-			
+			enTransicion = true
 			# Terminamos la timeline del cliente
 			Dialogic.end_timeline()
 			
@@ -344,8 +354,10 @@ func _on_dialogic_signal(argumento: String):
 			var dialogoIntermedio = Dialogic.start(datosActuales["timeline_intermedia"])
 			dialogoIntermedio.register_character(QUEIXO, puntoQueixo)
 			
+			enTransicion = false
 			
 		"final":
+			enTransicion = true
 			Dialogic.end_timeline()
 			
 			var layout = Dialogic.Styles.get_layout_node()
@@ -360,10 +372,12 @@ func _on_dialogic_signal(argumento: String):
 				$Personaje.visible = true
 
 				nuevo_cliente(CLIENTES_COLA[ListaRecetas.clienteActual])
+				enTransicion = false
 				return # Salimos aquí para que no avance de ronda todavía
 			
 			# Pasamos al siguiente cliente de la lista
 			ListaRecetas.clienteActual += 1
+			detener_parpadeo()
 
 			# Resetemos el interruptor global para que el nuevo cliente pueda hablar al llegar
 			ListaRecetas.dialogoInicial = false 
@@ -389,6 +403,8 @@ func _on_dialogic_signal(argumento: String):
 					$PantallaFinal.visible = true
 
 					Music.play_track("finalMalo", 0.5)
+					
+			enTransicion = false
 		
 		"carta":
 			$PantallaFinal.texture = load("res://AmorodoJam2026/assets/2D/pantallas/final/pantalla_final_bien.png")
